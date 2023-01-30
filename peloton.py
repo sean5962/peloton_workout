@@ -47,6 +47,8 @@ def main():
 
         print(f"{zone['name']} (Stage 1): {zone['tgt']}")
 
+
+    
     #testing commit
     #print(zones)
 
