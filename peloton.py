@@ -64,6 +64,8 @@ def zone_display(number):
         stage_mult = 1
 
 
+    #calculate and print 
+
     for zone in zones:
         if zone['name'] == 'Zone 1':
             zone['tgt'] = int(zone['bt_range'] + zone['tp_range'] * .62)
