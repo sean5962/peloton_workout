@@ -5,8 +5,10 @@
 
 # V1.1 goals: 
     # Make formula dynamic
-    # Add quit button
-    # Clean code presentation
+    # Add quit button 'q', welcome message, presentation to first prompt screen (DONE)
+    # Clean print UI (DONE)
+    # Clean code presentation (DONE)
+    # Re-prompt after zones to return to menu or quit
 
 # V2.0 goals: 
     # Add ability to get weightlifting numbers
@@ -35,9 +37,17 @@ def main():
     # Menu loop that prompts for which zone to display
 
     while True:
-        prompt =  int(input("Which zone do you need? "))
+        #start as string input in case of quit, then cast to int for zones/menu select
+        prompt =  input("\nWelcome to Sean's Peloton App!\n\nPress 'q' to quit at any time\n\n\n\nPress 1-3 to select a bike workout zone, or Press 9 to get a dumbbell workout list: ")
         
+        if prompt.lower() == 'q':
+            quit()
+
+        prompt = int(prompt)
+
         if prompt == 1 or prompt == 2 or prompt == 3:
+            #add line for spacing then print zones
+            print("\n")
             zone_display(prompt)
             break
             
@@ -69,7 +79,6 @@ def zone_display(number):
         stage_mult = .75
     elif number == 3:
         stage_mult = 1
-
 
     #calculate and print 
 
