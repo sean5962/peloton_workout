@@ -1,5 +1,3 @@
-# Test new feature branch
-
 # V1 goals:
     # Menu that asks 1, 2, 3 for which stage to display
     # List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
@@ -7,6 +5,8 @@
 
 # V1.1 goals: 
     # Make formula dynamic
+    # Add quit button
+    # Clean code presentation
 
 # V2.0 goals: 
     # Add ability to get weightlifting numbers
