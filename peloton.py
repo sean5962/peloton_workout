@@ -7,6 +7,8 @@
 #
 #
 
+#print('hello world')
+
 def main():
     # Goal: List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
 
