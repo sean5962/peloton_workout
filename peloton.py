@@ -3,12 +3,14 @@
     # List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
     # Inputs don't need to be dynamic yet
 
+# V1.1 goals: 
+    # Make formula dynamic
 
-#
-#
-
-#print('hello world')
-#test repo on desktop
+# V2.0 goals: 
+    # Add ability to get weightlifting numbers
+    # Press '9' to get to weightlifting numbers
+    # Ask for which types of weights you have, then desired rep range
+    # Output list of increasing difficulty sets w percentage increase listed
 
 def main():
     # Goal: List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
