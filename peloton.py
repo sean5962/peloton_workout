@@ -1,3 +1,5 @@
+# Test new feature branch
+
 # V1 goals:
     # Menu that asks 1, 2, 3 for which stage to display
     # List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
@@ -82,22 +84,7 @@ def zone_display(number):
 
         print(f"{zone['name']} (Stage {stage}): {zone['tgt']}")
 
-
-    
-
-    
-    #testing commit
-    #print(zones)
-
     input()
-
-
-
-
-
-
-
-
 
 
 main()
