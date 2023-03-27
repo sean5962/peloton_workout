@@ -60,17 +60,22 @@ def main():
 def zone_display(number):
     # clear screen
     # use algorithm to give top range to Zone 7 because it comes uncalculated
-
+    # list current FTP (Peloton watts, not avg ride output from test) and offer to let them change to recalculate
     # list of dictionaries, listing name, bottom of the range, top of the range, and target output
     os.system("cls")
+
+    # recent FTP results
+    ftp = 191
+
+    print(f"Current FTP: {ftp}")
     zones = [
-        {"name": "Zone 1", "bt_range": 0, "tp_range": 106, "tgt": 0},
-        {"name": "Zone 2", "bt_range": 106, "tp_range": 144, "tgt": 0},
-        {"name": "Zone 3", "bt_range": 144, "tp_range": 173, "tgt": 0},
-        {"name": "Zone 4", "bt_range": 173, "tp_range": 202, "tgt": 0},
-        {"name": "Zone 5", "bt_range": 202, "tp_range": 230, "tgt": 0},
-        {"name": "Zone 6", "bt_range": 230, "tp_range": 288, "tgt": 0},
-        {"name": "Zone 7", "bt_range": 288, "tp_range": None, "tgt": 0},
+        {"name": "Zone 1", "bt_range": 0, "tp_range": round(ftp * .55), "tgt": 0},
+        {"name": "Zone 2", "bt_range": round(ftp * .55), "tp_range": round(ftp * .75), "tgt": 0},
+        {"name": "Zone 3", "bt_range": round(ftp * .75), "tp_range": round(ftp * .9), "tgt": 0},
+        {"name": "Zone 4", "bt_range": round(ftp * .9), "tp_range": round(ftp * 1.05), "tgt": 0},
+        {"name": "Zone 5", "bt_range": round(ftp * 1.05), "tp_range": round(ftp * 1.2), "tgt": 0},
+        {"name": "Zone 6", "bt_range": round(ftp * 1.2), "tp_range": round(ftp * 1.5), "tgt": 0},
+        {"name": "Zone 7", "bt_range": round(ftp * 1.5), "tp_range": None, "tgt": 0},
     ]
 
     # initialize var to populate stage number
