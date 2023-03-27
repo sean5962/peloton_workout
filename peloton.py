@@ -1,3 +1,5 @@
+import os
+
 # V1 goals:
     # Menu that asks 1, 2, 3 for which stage to display
     # List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
@@ -8,7 +10,7 @@
     # Add quit button 'q', welcome message, presentation to first prompt screen (DONE)
     # Clean print UI (DONE)
     # Clean code presentation (DONE)
-    # Re-prompt after zones to return to menu or quit
+    # Re-prompt after zones to return to menu or quit (DONE)
 
 # V2.0 goals: 
     # Add ability to get weightlifting numbers
@@ -37,7 +39,9 @@ def main():
     # Menu loop that prompts for which zone to display
 
     while True:
+        #clear screen
         #start as string input in case of quit, then cast to int for zones/menu select
+        os.system("cls")
         prompt =  input("\nWelcome to Sean's Peloton App!\n\nPress 'q' to quit at any time\n\n\n\nPress 1-3 to select a bike workout zone, or Press 9 to get a dumbbell workout list: ")
         
         if prompt.lower() == 'q':
@@ -54,9 +58,11 @@ def main():
 
 
 def zone_display(number):
+    #clear screen
     #use algorithm to give top range to Zone 7 because it comes uncalculated
 
     #list of dictionaries, listing name, bottom of the range, top of the range, and target output
+    os.system("cls")
     zones = [
         {"name": "Zone 1", "bt_range": 0, "tp_range": 106, "tgt": 0},
         {"name": "Zone 2", "bt_range": 106, "tp_range": 144, "tgt": 0},
@@ -93,7 +99,17 @@ def zone_display(number):
 
         print(f"{zone['name']} (Stage {stage}): {zone['tgt']}")
 
-    input()
+    quit_prompt()
+
+def quit_prompt():
+    while True:
+        
+        selection = input("\npress 'q' to quit or '1' to return to menu: ")
+        if selection.lower() == "q":
+            quit()
+        elif int(selection) == 1:
+            main()
+
 
 
 main()
