@@ -20,20 +20,23 @@ import os
 
 
 def main():
-    # Goal: List the output required for stage 1 (half-zone), stage 2 (3/4 zone), and stage 3 (full zone)
-
+    
+    
     # Steps:
-    # Prompt user w menu, 1 for view Stage 1 outputs, 2 for Stage 2, etc
-    # Display each zone for each stage
-    # Zone 1 rest is 62% of Zone 1
-    # Current Top/Bottom as of Jan '23:
-    # Zone 1: 0 - 106 (Rest 65)
-    # Zone 2: 106 - 144
-    # Zone 3: 144 - 173
-    # Zone 4: 173 - 202
-    # Zone 5: 202 - 230
-    # Zone 6: 230 - 288
-    # Zone 7: 288+
+        # Prompt user w menu, 1 for bike, 2 for weights, q for quit
+            # Bike menu: Prompt user w menu, 1 for view Stage 1 outputs, 2 for Stage 2, etc
+                # Display each zone for each stage
+                # Zone 1 rest is 62% of Zone 1
+                # Current Top/Bottom as of Jan '23:
+                    # Zone 1: 0 - 106 (Rest 65)
+                    # Zone 2: 106 - 144
+                    # Zone 3: 144 - 173
+                    # Zone 4: 173 - 202
+                    # Zone 5: 202 - 230
+                    # Zone 6: 230 - 288
+                    # Zone 7: 288+
+            # Weight menu: Prompt for weight amounts available, then rep range requested
+                #calculate different options, with 0-10% increase in each option, heavier weights classified as more difficult if same total weight
 
     # Menu loop that prompts for which zone to display
 
@@ -118,6 +121,8 @@ def quit_prompt():
             quit()
         elif int(selection) == 1:
             main()
-
+        else:
+            continue
+        
 
 main()
